@@ -1,0 +1,13 @@
+﻿生成启动时间为 2018/1/31 18:53:33。
+     1>项目“E:\比特作业\递归实现n^k\递归实现n^k\递归实现n^k.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\比特人\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt "递归实现n^k.c"
+         递归实现n^k.c
+       Link:
+         E:\比特人\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\比特作业\递归实现n^k\Debug\递归实现n^k.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\比特作业\递归实现n^k\Debug\递归实现n^k.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\比特作业\递归实现n^k\Debug\递归实现n^k.lib" /MACHINE:X86 "Debug\递归实现n^k.obj"
+         递归实现n^k.vcxproj -> E:\比特作业\递归实现n^k\Debug\递归实现n^k.exe
+     1>已完成生成项目“E:\比特作业\递归实现n^k\递归实现n^k\递归实现n^k.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.21

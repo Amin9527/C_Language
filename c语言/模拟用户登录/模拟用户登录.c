@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int j=0,i=0;
+    char zm[7],password[7]="961118";
+    printf("«Î ‰»Î√‹¬Î£∫ ");
+    //scanf("%s",zm);
+    while(j<3)
+    {
+            scanf("%s",zm);
+        if(strcmp(zm,"961118")==0)
+        {
+            printf("µ«¬Ω≥…π¶£°");
+            break;
+        }
+        else
+        {
+            j++;
+            if(j<3)
+            printf("√‹¬Î¥ÌŒÛ£¨«Î÷ÿ–¬ ‰»Î£°\n");
+
+
+
+        }
+    }
+    if(3==j)
+    {
+        printf("µ«¬º ß∞‹£°\n");
+    }
+    return 0;
+}

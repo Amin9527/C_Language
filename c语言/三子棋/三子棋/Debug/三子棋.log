@@ -1,0 +1,22 @@
+﻿生成启动时间为 2018/1/13 16:11:01。
+     1>项目“E:\比特作业\三子棋\三子棋\三子棋.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\比特人\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt game.c test.c
+         test.c
+         game.c
+     1>e:\比特作业\三子棋\三子棋\game.c(10): warning C4013: “menu”未定义；假设外部返回 int
+     1>e:\比特作业\三子棋\三子棋\game.c(13): warning C4013: “init”未定义；假设外部返回 int
+     1>e:\比特作业\三子棋\三子棋\game.c(14): warning C4013: “print”未定义；假设外部返回 int
+     1>e:\比特作业\三子棋\三子棋\game.c(17): warning C4013: “player”未定义；假设外部返回 int
+     1>e:\比特作业\三子棋\三子棋\game.c(18): warning C4013: “check”未定义；假设外部返回 int
+     1>e:\比特作业\三子棋\三子棋\game.c(29): warning C4013: “computer”未定义；假设外部返回 int
+         正在生成代码...
+       Link:
+         E:\比特人\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\比特作业\三子棋\Debug\三子棋.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\比特作业\三子棋\Debug\三子棋.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\比特作业\三子棋\Debug\三子棋.lib" /MACHINE:X86 Debug\game.obj
+         Debug\test.obj
+         三子棋.vcxproj -> E:\比特作业\三子棋\Debug\三子棋.exe
+     1>已完成生成项目“E:\比特作业\三子棋\三子棋\三子棋.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.48

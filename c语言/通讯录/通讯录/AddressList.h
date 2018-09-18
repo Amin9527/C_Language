@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include<assert.h>
 #include<string.h>
+#include<malloc.h>
 
 #define Max 10
 
@@ -16,7 +17,6 @@ typedef struct PersonNode
 	struct PersonNode* next;
 }*Person,person;
  
-
 void display();
 void InitNode(Person* node);
 void AddPerson(Person* node);

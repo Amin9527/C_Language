@@ -39,11 +39,9 @@ void AddPerson(Person *p)
 {
 	assert(p);
 	Person Node = *p;
-	Person node = NULL;
-	if (*p == NULL)
+	if (*p == NULL)//通讯录为空时
 	{
-		(*p) = (Person)malloc(sizeof(person));
-		//node->person->name = (char*)malloc(10);
+		(*p) = (Person)malloc(sizeof(person));//为结构体指针变量开辟空间
 		printf("请输入姓名：");
 		scanf("%s", &(*p)->name);
 		printf("请输入性别：");
@@ -54,27 +52,24 @@ void AddPerson(Person *p)
 		scanf("%s", &(*p)->phone);
 		printf("请输入住址：");
 		scanf("%s", &(*p)->add);
-		//(*node)->count++;
-		(*p)->next = NULL;
+		(*p)->next = NULL;//节点中的next指向空
 	}
-	else
+	else//通讯录不为空时
 	{
-		while (Node->next)
+		while (Node->next)//找到最后一个人后面的空位置
 			Node = (Node)->next;
-		(node) = (Person)malloc(sizeof(person));
-		//node->person->name = (char*)malloc(10);
+		(Node->next) = (Person)malloc(sizeof(person));
 		printf("请输入姓名：");
-		scanf("%s", &(node)->name);
+		scanf("%s", &(Node->next)->name);
 		printf("请输入性别：");
-		scanf("%s", &(node)->sex);
+		scanf("%s", &(Node->next)->sex);
 		printf("请输入年龄：");
-		scanf("%d", &(node)->age);
+		scanf("%d", &(Node->next)->age);
 		printf("请输入电话：");
-		scanf("%s", &(node)->phone);
+		scanf("%s", &(Node->next)->phone);
 		printf("请输入住址：");
-		scanf("%s", &(node)->add);
-		node->next = NULL;
-		(Node)->next = node;
+		scanf("%s", &(Node->next)->add);
+		Node->next->next = NULL;//使新节点的next指向空
 	}
 }
 
@@ -92,20 +87,21 @@ void DeletePerson(Person* node)
 		printf("通讯录为空！\n");
 		return;
 	}
-	while (*name!=*(p)->name)
+	while (*name!=*(p)->name)//从头开始找名字相同的联系人
 	{
-		Pre = p;
-		p = p->next;
-		if (p == NULL)
+		Pre = p;//保存前一个联系人节点
+		p = p->next;//指向下一个联系人节点
+		if (p == NULL)//没找到
 		{
 			printf("没有该联系人！\n");
 			return;
 		}
 	}
-	if (p != *node)
-		Pre->next = p->next;
-	else
+	if (p != *node)//查找的联系人节点不为第一个联系人节点
+		Pre->next = p->next;//使前一个联系人节点的next指向查找联系人节点的next（删除节点）
+	else//查找的联系人为第一个联系人
 		*node = (*node)->next;
+	free(p);//释放删除联系人的空间
 }
 
 //查找联系人
@@ -119,7 +115,7 @@ Person FindPerson(Person p)
 		printf("通讯录为空！\n");
 		return NULL;
 	}
-	while (strcmp(name,p->name) != 0)
+	while (strcmp(name,p->name) != 0)//比较联系人姓名，不相等里层返回非零，外层为真，相等里层返回零，外层为假
 	{
 		p = p->next;
 		if (p == NULL)
@@ -152,42 +148,32 @@ void ChangePerson(Person* p)
 	{
 	case 1:
 	{
-			 // char con[10];
 			  printf("您要修改为：");
 			  scanf("%s", node->name);
-			 // *(node->name) = *con;
 			  break;
 	}
 	case 2:
 	{
-			  //char con[4];
 			  printf("您要修改为：");
 			  scanf("%s", node->sex);
-			  //*(node->sex) = *con;
 			  break;
 	}
 	case 3:
 	{
-		//int con=0;
 		printf("您要修改为：");
 		scanf("%d", &node->age);
-		//(node->age) = con;
 		break;
 	}
 	case 4:
 	{
-		//int con[12];
 		printf("您要修改为：");
 		scanf("%s", node->phone);
-		//*(node->phone) = *con;
 		break;
 	}
 	case 5:
 	{
-		//char con[50];
 		printf("您要修改为：");
 		scanf("%s", node->add);
-		//*(node->add) = *con;
 		break;
 	}
 	default:
@@ -225,7 +211,7 @@ void EmptyPerson(Person* p)
 {
 	assert(p);
 	if ((*p)->next != NULL)
-		EmptyPerson(&((*p)->next));
+		EmptyPerson(&((*p)->next));//递归
 	free(*p);
 	*p = NULL;
 	return;
@@ -249,7 +235,7 @@ void SortPerson_name(Person* p)
 		{
 			if (strcmp(Node->name, Node->next->name)>0)
 			{
-				if (j == 1)
+				if (j == 1)//第一个联系人节点就得排序
 				{
 					Node = Node->next;
 					pre->next = Node->next;

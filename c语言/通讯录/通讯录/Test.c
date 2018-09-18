@@ -4,7 +4,7 @@ int main()
 {
 	int n = 0;
 	Person p;
-	InitNode(&p);
+	InitNode(&p);//初始化
 	while (1)
 	{
 		printf("***********************************************************************************\n");
@@ -16,42 +16,42 @@ int main()
 		{
 		case 1:
 		{
-				  AddPerson(&p);
+				  AddPerson(&p);//添加联系人
 				  break;
 		}
 		case 2:
 		{
-				  DeletePerson(&p);
+				  DeletePerson(&p);//删除联系人
 				  break;
 		}
 		case 3:
 		{
-				  FindPerson(p);
+				  FindPerson(p);//查找联系人
 				  break;
 		}
 		case 4:
 		{
-				  ChangePerson(&p);
+				  ChangePerson(&p);//修改联系人信息
 				  break;
 		}
 		case 5:
 		{
-				  DisplayPerson(p);
+				  DisplayPerson(p);//展示所有联系人信息
 				  break;
 		}
 		case 6:
 		{
-				  EmptyPerson(&p);
+				  EmptyPerson(&p);//清空联系人
 				  break;
 		}
 		case 7:
 		{
-				  SortPerson_name(&p);
+				  SortPerson_name(&p);//按名字排序联系人
 				  break;
 		}
 		case 0:
 		{
-				  return 0;
+				  return 0;//推出
 				  break;
 		}
 		default:
@@ -61,8 +61,6 @@ int main()
 		}
 		}
 	}
-	
-	//DisplayPerson(node);
 	system("pause");
 	return 0;
 }

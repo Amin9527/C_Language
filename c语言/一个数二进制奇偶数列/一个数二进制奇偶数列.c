@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main()
+{
+    int i=0,j=0,k=0;
+    printf("请输入一个数：");
+    scanf("%d",&i);
+    k=i;
+    if(i>=0)
+    {
+        printf("奇数列为：");
+    while(j<16)
+    {
+        printf("%d",i%2);
+        i=i>>2;
+        j++;
+    }
+    printf("\n");
+     printf("偶数列为：");
+     k=k>>1;
+      while(j<32)
+    {
+        printf("%d",k%2);
+        k=k>>2;
+        j++;
+    }
+    }
+    else
+    {
+        printf("奇数列为：");
+    while(j<16)
+    {
+        printf("%d",-i%2);
+        i=i>>2;
+        j++;
+    }
+    printf("\n");
+     printf("偶数列为：");
+     k=k>>1;
+      while(j<32)
+    {
+        printf("%d",-k%2);
+        k=k>>2;
+        j++;
+    }
+    }
+    return 0;
+}

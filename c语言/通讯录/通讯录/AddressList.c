@@ -192,10 +192,11 @@ void DisplayPerson(Person node)
 		printf("没有联系人！\n");
 		return;
 	}
-	printf("姓名    性别  年龄   电话           住址\n\n");
+	//printf("姓名    性别  年龄   电话           住址\n\n");
+	printf("%-10s%-10s%-6s%-13s%s","姓名","性别","年龄","电话","住址\n");
 	while(node!=NULL)
 	{
-	    printf("%-6s  %-6s %-4d  %-13s %-20s", node->name, 
+	    printf("%-10s%-10s%-6d%-13s%-20s", node->name, 
 			                               node->sex, 
 			                               node->age, 
 			                               node->phone, 
